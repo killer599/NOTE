@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>泡泡记事本</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div id="main">
+    <div id="menu">
+      <span>
+        <textarea name="input-place" id="input-place" rows="1" cols="15" placeholder="请输入"></textarea>
+      </span>
+      <span id="buttons">
+        <button onclick="addNote()">添加</button>
+        <button onclick="search()">搜索</button>
+        <button onclick="removeAll()">清空</button>
+        <button onclick="reverse()">逆序</button>
+        <button onclick="changeBackground()">改变背景</button>
+      </span>
+    </div>
+    <div id="text-content">
+      <div id="content">
+        <div id="note-demo" class="note"
+           ondblclick="remove(this)"
+           onmouseenter="highLight(this)"
+           onmouseleave="lowLight(this)">
+            <div class="number-container">
+             <span class="number">0</span>
+            </div>
+            <div class="literal-container">
+              <span class="literal">hidden作为number的前提</span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
